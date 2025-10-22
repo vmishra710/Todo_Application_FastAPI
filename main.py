@@ -3,7 +3,7 @@ import models
 from database import engine
 from routers import auth, todos, admin, users
 
-app = FastAPI()
+app = FastAPI(title='TODO Management API')
 
 models.Base.metadata.create_all(bind=engine)
 
